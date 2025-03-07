@@ -67,6 +67,7 @@ const StripePaymentButton = ({
   }
 
   const stripe = useStripe()
+  console.log({stripe})
   const elements = useElements()
   const card = elements?.getElement("card")
 
