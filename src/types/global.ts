@@ -36,9 +36,8 @@ export type DigitalProduct = {
 
 export type DigitalProductMedia = {
   id: string
-  fileId: string
-  type: "preview" | "main"
-  mimeType: string
+  fileId: string;
+  mimeType: string;
   digitalProduct?: DigitalProduct[]
 }
 

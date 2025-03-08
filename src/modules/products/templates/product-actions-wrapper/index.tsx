@@ -8,10 +8,12 @@ import ProductActions from "@modules/products/components/product-actions"
 export default async function ProductActionsWrapper({
   id,
   region,
+  variantInfo
 }: {
   id: string
-  region: HttpTypes.StoreRegion
-}) {
+  region: HttpTypes.StoreRegion,
+  variantInfo: any
+}  ) {
   const product = await listProducts({
     queryParams: { id: [id] },
     regionId: region.id,
@@ -21,5 +23,5 @@ export default async function ProductActionsWrapper({
     return null
   }
 
-  return <ProductActions product={product} region={region} />
+  return <ProductActions {...variantInfo} product={product} region={region} />
 }
