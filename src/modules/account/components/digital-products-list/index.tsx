@@ -20,7 +20,7 @@ export const DigitalProductsList = ({
       </Table.Header>
       <Table.Body>
         {digitalProducts.map((digitalProduct) => {
-          const medias = digitalProduct.medias?.filter((media) => media.type === "main")
+          const medias = digitalProduct.medias 
           const showMediaCount = (medias?.length || 0) > 1
           return (
             <Table.Row key={digitalProduct.id}>

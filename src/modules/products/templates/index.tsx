@@ -1,5 +1,3 @@
-
-
 import React, { Suspense } from "react"
 
 import ProductOnboardingCta from "@modules/products/components/product-onboarding-cta"
@@ -9,7 +7,7 @@ import ProductInfo from "@modules/products/templates/product-info"
 import SkeletonRelatedProducts from "@modules/skeletons/templates/skeleton-related-products"
 import { notFound } from "next/navigation"
 import { HttpTypes } from "@medusajs/types"
-import ProductShow from "../components/product-show"
+import Variants from "../components/variants"
 
 type ProductTemplateProps = {
   product: HttpTypes.StoreProduct
@@ -25,7 +23,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
   if (!product || !product.id) {
     return notFound()
   }
-   return (
+  return (
     <>
       <div
         className="content-container flex flex-col small:flex-row small:items-start py-6 relative"
@@ -35,9 +33,9 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({
           <ProductInfo product={product} />
           <ProductTabs product={product} />
         </div>
-        <ProductShow region ={region} product={product} >
+        <Variants region={region} product={product}>
           <ProductOnboardingCta />
-        </ProductShow>
+        </Variants>
       </div>
       <div
         className="content-container my-16 small:my-32"

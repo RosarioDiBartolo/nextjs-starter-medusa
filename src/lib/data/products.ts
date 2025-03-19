@@ -68,7 +68,7 @@ export const listProducts = async ({
         },
         headers,
         next,
-        cache: "force-cache",
+        // cache: "force-cache",
       }
     )
     .then(({ products, count }) => {
@@ -154,11 +154,11 @@ export const getDigitalProductPreview = async function ({
     {
       headers,
       next,
-      cache: "force-cache",
+      // cache: "force-cache",
     }
   )
 
   // for simplicity, return only the first preview url
   // instead you can show all the preview media to the customer
-  return previews.length ? previews[0].url : ""
+  return  previews
 }

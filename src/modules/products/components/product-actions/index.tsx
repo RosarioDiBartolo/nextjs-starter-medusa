@@ -53,20 +53,18 @@ export default function ProductActions({
       return
     }
 
-    const downloadUrl = await getDigitalProductPreview({
-      id: selectedVariant?.digital_product.id,
-    })
+ 
 
-    if (downloadUrl.length) {
-      window.open(downloadUrl)
-    }
+    // if (downloadUrl.length) {
+    //   window.open(downloadUrl)
+    // }
   }
 
 
 
   return (
     <>
-      <div className="flex flex-col gap-y-2" ref={actionsRef}>
+      <div className="flex flex-1 flex-col gap-y-2    min-w-96    " ref={actionsRef}>
         <div>
           {(product.variants?.length ?? 0) > 1 && (
             <div className="flex flex-col gap-y-4">

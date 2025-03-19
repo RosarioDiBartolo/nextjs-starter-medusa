@@ -15,14 +15,20 @@
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@babylonjs/core": "^7.52.2",
+    "@babylonjs/loaders": "^7.52.2",
     "@headlessui/react": "^2.2.0",
     "@medusajs/js-sdk": "latest",
     "@medusajs/ui": "latest",
     "@radix-ui/react-accordion": "^1.2.1",
+    "@react-three/drei": "^10.0.4",
+    "@react-three/fiber": "^9.1.0",
+    "@react-three/rapier": "^2.0.0",
     "@stripe/react-stripe-js": "^1.7.2",
     "@stripe/stripe-js": "^1.29.0",
     "lodash": "^4.17.21",
     "next": "15.0.3",
+    "node-fetch": "^3.3.2",
     "pg": "^8.11.3",
     "qs": "^6.12.1",
     "react": "19.0.0-rc-66855b96-20241106",
@@ -30,6 +36,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "server-only": "^0.0.1",
     "tailwindcss-radix": "^2.8.0",
+    "three": "^0.174.0",
     "webpack": "^5"
   },
   "devDependencies": {
